@@ -6,6 +6,8 @@
 #include <iostream>
 #include "../tools/tools.hpp"
 
+//test comment 
+
 struct Frame {
         int duration;
         sf::IntRect rect;
