@@ -17,7 +17,7 @@ class Animation
 private:
     
     sf::Clock clock;
-    sf::Sprite* sprite;
+    sf::Sprite* sprite = nullptr;
     Frame animationFrame;
     std::vector<Frame> animationFrames;
     int currentFrame = 0;
@@ -25,7 +25,6 @@ private:
 public:
 
     ~Animation() {
-        delete this->sprite;
     }
 
     void setSprite(sf::Sprite* sprite) {
@@ -40,6 +39,10 @@ public:
 
     int getCurrentFrame() {
         return currentFrame;
+    }
+
+    sf::Sprite* getSprite() {
+        return sprite;
     }
 
     void setFrame(int index) {

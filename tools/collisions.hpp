@@ -19,7 +19,7 @@ namespace ge {
                 if (s1bounds.top < s2bounds.top + s2bounds.height && s1bounds.top > s2bounds.top && s1bounds.top + s1bounds.height > s2bounds.top + s2bounds.height) {
                     s1.move(0.f,velocity);
                 }
-                if (s1bounds.top + s1bounds.height < s2bounds.top && s1bounds.top < s2bounds.top && s1bounds.top + s1bounds.height < s2bounds.top + s2bounds.height) {
+                if (s1bounds.top + s1bounds.height > s2bounds.top && s1bounds.top < s2bounds.top && s1bounds.top + s1bounds.height < s2bounds.top + s2bounds.height) {
                     s1.move(0.f,-velocity);
                 }
             }

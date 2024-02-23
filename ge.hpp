@@ -29,6 +29,11 @@ namespace ge {
         data->win.setFramerateLimit(60);
     }
 
+    inline void createFullScreenWindow(Data* data, std::string title) {
+        data->win.create(sf::VideoMode::getFullscreenModes()[0], title, sf::Style::Fullscreen);
+        data->win.setFramerateLimit(60);
+    }
+
     inline void read(Data* data, std::string path) {
         std::filebuf fb;
         if (!fb.open(path, std::ios::in)) {
